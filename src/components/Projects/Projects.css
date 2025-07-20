@@ -1,0 +1,524 @@
+/* Modern Projects Section - Dark Theme */
+.projects-modern {
+  padding: var(--section-padding) 0;
+  background: linear-gradient(135deg, #0a0a0a 0%, #111111 50%, #0a0a0a 100%);
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  margin-left: 0;
+}
+
+.projects-modern::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+    radial-gradient(circle at 20% 70%, rgba(226, 76, 74, 0.08) 0%, transparent 50%),
+    radial-gradient(circle at 80% 30%, rgba(56, 107, 183, 0.08) 0%, transparent 50%),
+    radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.02) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.projects-modern-container {
+  max-width: var(--container-width);
+  margin: 0 auto;
+  padding: 0 var(--container-padding);
+  position: relative;
+  z-index: 2;
+}
+
+.projects-modern-content {
+  position: relative;
+  width: 100%;
+  max-width: var(--container-max-width);
+  margin: 0 auto;
+}
+
+.projects-modern-header {
+  text-align: left;
+  margin-bottom: 4rem;
+  position: relative;
+}
+
+.section-path-modern {
+  font-size: 0.875rem;
+  color: #888;
+  font-weight: 500;
+  margin-bottom: 1.5rem;
+  text-transform: lowercase;
+  letter-spacing: 2px;
+  position: relative;
+  display: inline-block;
+  opacity: 0.8;
+}
+
+.section-path-modern::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+  width: 30px;
+  height: 2px;
+  background: linear-gradient(90deg, #386bb7, #e24c4a);
+  border-radius: 1px;
+}
+
+.projects-modern-title {
+  font-size: clamp(2.5rem, 5vw, 3.5rem);
+  font-weight: 800;
+  color: #ffffff;
+  line-height: 1.1;
+  margin-bottom: 2.5rem;
+  font-family: var(--font-secondary);
+  letter-spacing: -0.03em;
+  background: linear-gradient(135deg, #ffffff 0%, #e0e0e0 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Navigation Controls */
+.projects-navigation {
+  display: flex;
+  align-items: center;
+  gap: 2.5rem;
+  margin-top: 2.5rem;
+}
+
+.nav-controls {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.nav-btn {
+  width: 52px;
+  height: 52px;
+  border-radius: 14px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  background: rgba(255, 255, 255, 0.05);
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  backdrop-filter: blur(20px);
+  position: relative;
+  overflow: hidden;
+}
+
+.nav-btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+  transition: left 0.5s;
+}
+
+.nav-btn:hover::before {
+  left: 100%;
+}
+
+.nav-btn:hover {
+  background: rgba(255, 255, 255, 0.12);
+  border-color: rgba(255, 255, 255, 0.25);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+.explore-more-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.875rem;
+  background: linear-gradient(135deg, rgba(56, 107, 183, 0.2), rgba(226, 76, 74, 0.2));
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 1rem 2rem;
+  border-radius: 14px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  backdrop-filter: blur(20px);
+  position: relative;
+  overflow: hidden;
+}
+
+.explore-more-btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+  transition: left 0.5s;
+}
+
+.explore-more-btn:hover::before {
+  left: 100%;
+}
+
+.explore-more-btn:hover {
+  background: linear-gradient(135deg, rgba(56, 107, 183, 0.3), rgba(226, 76, 74, 0.3));
+  border-color: rgba(255, 255, 255, 0.3);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+/* Projects Cards Container */
+.projects-cards-container {
+  margin-top: 5rem;
+}
+
+.projects-cards-wrapper {
+  display: flex;
+  gap: 2rem;
+  overflow-x: auto;
+  padding: 1.5rem 0;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.projects-cards-wrapper::-webkit-scrollbar {
+  display: none;
+}
+
+/* Project Cards */
+.project-card {
+  min-width: 340px;
+  max-width: 340px;
+  background: linear-gradient(135deg, #1a1a1a 0%, #1f1f1f 100%);
+  border-radius: 20px;
+  overflow: hidden;
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  position: relative;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
+}
+
+.project-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(56, 107, 183, 0.05), rgba(226, 76, 74, 0.05));
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  pointer-events: none;
+}
+
+.project-card:hover::before {
+  opacity: 1;
+}
+
+.project-card.active {
+  background: linear-gradient(135deg, #1f1f1f 0%, #252525 100%);
+  border-color: rgba(255, 255, 255, 0.15);
+  transform: scale(1.05);
+  box-shadow: 0 8px 40px rgba(0, 0, 0, 0.4);
+}
+
+.project-card-image {
+  position: relative;
+  height: 220px;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.project-card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.project-card.active .project-card-image img {
+  transform: scale(1.08);
+}
+
+.project-card-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(226, 76, 74, 0.9), rgba(56, 107, 183, 0.9));
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-end;
+  padding: 1.25rem;
+}
+
+.project-category-badge {
+  background: rgba(255, 255, 255, 0.95);
+  color: #1a1a1a;
+  padding: 0.625rem 1.25rem;
+  border-radius: 10px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  backdrop-filter: blur(20px);
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.project-card-content {
+  padding: 2rem;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.project-card-title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #ffffff;
+  line-height: 1.4;
+  margin: 0 0 1.25rem 0;
+  font-family: var(--font-secondary);
+  letter-spacing: -0.01em;
+  text-align: left;
+}
+
+.project-card-description {
+  font-size: 0.9rem;
+  color: #bbb;
+  line-height: 1.6;
+  margin: 0 0 2rem 0;
+  font-weight: 400;
+  text-align: left;
+  flex: 1;
+}
+
+/* Project Card Actions */
+.project-card-actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: auto;
+  gap: 1rem;
+}
+
+.project-learn-more-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: none;
+  border: none;
+  color: var(--primary-color);
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+  padding: 0.5rem 0;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  flex: 1;
+  justify-content: flex-start;
+}
+
+.project-learn-more-btn:hover {
+  gap: 0.75rem;
+  color: var(--secondary-color);
+}
+
+.project-learn-more-btn svg {
+  transition: transform 0.3s ease;
+}
+
+.project-learn-more-btn:hover svg {
+  transform: translateX(4px);
+}
+
+.project-card-toggle {
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
+  background: linear-gradient(135deg, #e24c4a, #f39c12);
+  color: white;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 6px 20px rgba(226, 76, 74, 0.4);
+  flex-shrink: 0;
+}
+
+.project-card-toggle:hover {
+  transform: scale(1.15);
+  box-shadow: 0 8px 25px rgba(226, 76, 74, 0.5);
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .projects-modern {
+    margin-left: 0;
+  }
+  
+  .projects-modern-container {
+    padding: 0 30px;
+  }
+  
+  .projects-navigation {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.5rem;
+  }
+  
+  .projects-cards-wrapper {
+    gap: 1.5rem;
+  }
+  
+  .project-card {
+    min-width: 300px;
+    max-width: 300px;
+  }
+}
+
+@media (max-width: 768px) {
+  .projects-modern {
+    padding: 60px 0;
+    margin-left: 0;
+  }
+  
+  .projects-modern-container {
+    padding: 0 20px;
+  }
+  
+  .projects-modern-title {
+    font-size: 2.25rem;
+  }
+  
+  .projects-navigation {
+    gap: 1.25rem;
+  }
+  
+  .nav-btn {
+    width: 44px;
+    height: 44px;
+  }
+  
+  .explore-more-btn {
+    padding: 0.875rem 1.5rem;
+    font-size: 0.85rem;
+  }
+  
+  .projects-cards-wrapper {
+    gap: 1rem;
+  }
+  
+  .project-card {
+    min-width: 280px;
+    max-width: 280px;
+  }
+  
+  .project-card-content {
+    padding: 1.5rem;
+  }
+  
+  .project-card-title {
+    font-size: 1rem;
+  }
+  
+  .project-card-description {
+    font-size: 0.85rem;
+  }
+  
+  .project-card-actions {
+    gap: 0.75rem;
+  }
+  
+  .project-learn-more-btn {
+    font-size: 0.8rem;
+  }
+  
+  .project-card-toggle {
+    width: 32px;
+    height: 32px;
+  }
+}
+
+@media (max-width: 576px) {
+  .projects-modern {
+    margin-left: 0;
+  }
+  
+  .projects-modern-container {
+    padding: 0 16px;
+  }
+  
+  .projects-modern-title {
+    font-size: 2rem;
+  }
+  
+  .projects-navigation {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .nav-controls {
+    gap: 0.5rem;
+  }
+  
+  .nav-btn {
+    width: 40px;
+    height: 40px;
+  }
+  
+  .explore-more-btn {
+    padding: 0.75rem 1.25rem;
+    font-size: 0.8rem;
+  }
+  
+  .projects-cards-wrapper {
+    gap: 0.75rem;
+  }
+  
+  .project-card {
+    min-width: 260px;
+    max-width: 260px;
+  }
+  
+  .project-card-image {
+    height: 180px;
+  }
+  
+  .project-card-content {
+    padding: 1.25rem;
+  }
+  
+  .project-card-title {
+    font-size: 0.95rem;
+  }
+  
+  .project-card-description {
+    font-size: 0.8rem;
+  }
+  
+  .project-card-actions {
+    gap: 0.5rem;
+  }
+  
+  .project-learn-more-btn {
+    font-size: 0.75rem;
+  }
+  
+  .project-card-toggle {
+    width: 28px;
+    height: 28px;
+  }
+}
+ 
