@@ -83,11 +83,9 @@ const Testimonials: React.FC = () => {
             animate={inView ? { opacity: 1, x: 0 } : { opacity: 0, x: 50 }}
             transition={{ duration: 0.8, delay: 0.3 }}
           >
-            <span className="section-label">testimonials</span>
-            <h2 className="section-title">
-              <span className="title-gradient">
-                Hear what our customers say about our AI solutions
-              </span>
+            <div className="section-path-modern">/ testimonials /</div>
+            <h2 className="how-it-works-modern-title">
+              Hear what our customers say about our AI solutions
             </h2>
           </motion.div>
 

@@ -59,14 +59,12 @@ const Blog: React.FC = () => {
           animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
           transition={{ duration: 0.8 }}
         >
-          <div className="blog-title">
-            <span className="section-label">blog</span>
-            <h2 className="section-title">
-              <span className="title-gradient">
-                Exploring the frontiers of artificial Intelligence: Insights, innovations and impact
-              </span>
-            </h2>
+          <div style={{ marginBottom: '1rem' }}>
+            <div className="section-path-modern">/ blog /</div>
           </div>
+          <h2 className="how-it-works-modern-title">
+            Exploring the frontiers of artificial Intelligence: Insights, innovations and impact
+          </h2>
           
           <button className="btn btn-outline">
             <span>More articles</span>

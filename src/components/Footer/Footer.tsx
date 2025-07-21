@@ -17,21 +17,15 @@ const Footer: React.FC = () => {
     company: [
       { label: 'About Us', href: '#about' },
       { label: 'Our Team', href: '#team' },
-      { label: 'Careers', href: '#careers' },
-      { label: 'News & Media', href: '#news' },
       { label: 'Contact', href: '#contact' }
     ],
     services: [
-      { label: 'Neural Networks', href: '#neural-networks' },
-      { label: 'AI Development', href: '#ai-development' },
-      { label: 'Machine Learning', href: '#machine-learning' },
-      { label: 'Data Analytics', href: '#data-analytics' },
-      { label: 'Model Integration', href: '#model-integration' }
+      { label: 'AI Frameworks', href: '#services' },
+      { label: 'CyberFuse', href: '#services' },
+      { label: 'Developer Support', href: '#services' }
     ],
     resources: [
-      { label: 'Documentation', href: '#docs' },
       { label: 'API Reference', href: '#api' },
-      { label: 'Tutorials', href: '#tutorials' },
       { label: 'Blog', href: '#blog' },
       { label: 'Support', href: '#support' }
     ]
@@ -105,18 +99,7 @@ const Footer: React.FC = () => {
 
               <div className="footer-contact-modern">
                 <div className="contact-items-modern">
-                  <motion.div 
-                    className="contact-item-modern"
-                    whileHover={{ x: 5 }}
-                    transition={{ duration: 0.2 }}
-                  >
-                    <div className="contact-icon-wrapper">
-                      <MapPin size={18} />
-                    </div>
-                    <div className="contact-details">
-                      <span className="contact-value">Amsterdam, Netherlands</span>
-                    </div>
-                  </motion.div>
+                  {/* Removed Amsterdam, Netherlands location */}
                 </div>
               </div>
             </motion.div>
@@ -244,7 +227,7 @@ const Footer: React.FC = () => {
         >
           <div className="footer-bottom-content">
             <div className="footer-copyright-modern">
-              © 2024 <span className="copyright-brand">Cloudata.ai</span>. All rights reserved.
+              ©2025Cloudata.ai. All rights reserved.
             </div>
             
             <div className="footer-legal-modern">

@@ -126,10 +126,9 @@ const Contact: React.FC = () => {
         >
           {/* Header */}
           <motion.div className="contact-header" variants={itemVariants}>
-            <div className="section-label">Contact Us</div>
-            <h2 className="section-title">
-              Get in Touch with 
-              <span className="title-gradient"> Our Team</span>
+            <div className="section-path-modern">/ contact us /</div>
+            <h2 className="how-it-works-modern-title">
+              Get in Touch with Our Team
             </h2>
             <p className="section-subtitle">
               Ready to transform your business with AI? Let's discuss how our neural network 
